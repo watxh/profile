@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import React, { Component }  from 'react';
 
+import Profilecontents from '../molecules/Profilecontents';
+
 const Profilecard = () =>{
     return(
         <Card>
@@ -8,6 +10,7 @@ const Profilecard = () =>{
                 <Profileimage src = "/profile/profileimage.jpg"/>
             </Profileimagebox>
             <Namebar>Jung Min Kang</Namebar>
+            <Profilecontents/>
         </Card>
     )
 }
@@ -15,6 +18,7 @@ const Profilecard = () =>{
 const Card = styled.div `
     background-color:white;
     top:0;bottom:0;left:0;right:0;
+    margin-top:-40px;
     width:880px;
     height:320px;
     box-shadow:5px 5px 10px rgba(0,0,0,0.25);
@@ -57,7 +61,9 @@ const Namebar = styled.div`
     font-family: 'Ubuntu', sans-serif;
     display:inline;
     @media (max-width: 768px) {
-        left:30px;
+        left:45px;
+        font-size:30px;
+        top:-30px;
     }
 `
 

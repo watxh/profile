@@ -41,9 +41,9 @@ const Name = styled.div`
 
 const Snsimage = styled.img`
     position:relative;
-    top:11px;
+    top:17px;
     right:100px;
-    width:40px;
+    width:30px;
     height:auto;
     margin-right:10px;
     @media (max-width: 768px) {
