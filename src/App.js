@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 
 import Page from "./components/atoms/Page"
 import Topbar from "./components/organisms/Topbar"

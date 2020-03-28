@@ -1,40 +1,45 @@
-import styled from 'styled-components';
-import React, { Component }  from 'react';
-import Projectcard from '../molecules/Projectcard';
+import styled from "styled-components";
+import React, { Component } from "react";
+import Projectcard from "../molecules/Projectcard";
 
-const Projectlist = () =>{
-    return(
-        <Project>
-            <Name>
-                🔥 PROJECT
-            </Name>
-            <Projectgroup>
-                <Projectcard>
-                    
-                </Projectcard>
-            </Projectgroup>
-        </Project>
-    );
-}
+import projects from "../../data/projects"
+
+const Projectlist = () => {
+  return (
+    <Project>
+      <Name>🔥 PROJECT</Name>
+      <Projectgroup>
+        {projects.map(({ name,color }) => (
+          <Projectcard
+            image={require(`../../assets/projectimage/${name}.png`)}
+            name={name}
+            color={color}
+          />
+        ))}
+      </Projectgroup>
+    </Project>
+  );
+};
 
 const Project = styled.div`
-    position:relative;
-    top:350px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  margin-top: 330px;
 `;
 
 const Name = styled.div`
-    position:relative;
-    color:black;
-    font-size:40px;
-    font-family: 'Baloo Da 2', cursive;
-    left:-450px;
+  color: black;
+  font-size: 40px;
+  font-family: "Baloo Da 2", cursive;
 `;
 
 const Projectgroup = styled.div`
-    position:relative;
-    top:80px;
-    display:flex;
-    flex-direction:row;
+  top: 80px;
+  display: flex;
+  flex-direction: row;
+  margin-top:50px;
+  flex-wrap: wrap;
 `;
 
 export default Projectlist;

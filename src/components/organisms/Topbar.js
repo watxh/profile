@@ -1,57 +1,62 @@
-import styled from 'styled-components';
-import React, { Component }  from 'react';
+import styled from "styled-components";
+import React, { Component } from "react";
 
-const Topbar = () =>{
-    return (
-        <Bar>
-            <Name>WATXH</Name>
-            <a href = "https://github.com/watxh" target="_blank">
-                <Snsimage src="/topbarimage/githubL.png"/>
-            </a>
-            <a href = "https://www.facebook.com/profile.php?id=100009915570975" target="_blank">
-                <Snsimage src="/topbarimage/facebookL.png"/>
-            </a>
-        </Bar>
-    )
-}
+const Topbar = () => {
+  return (
+    <Bar>
+      <Barstyle>
+        <Name>WATXH</Name>
+        <div>
+          <a href="https://github.com/watxh" target="_blank">
+            <Snsimage src="/topbarimage/githubL.png" />
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100009915570975"
+            target="_blank"
+          >
+            <Snsimage src="/topbarimage/facebookL.png" />
+          </a>
+        </div>
+      </Barstyle>
+    </Bar>
+  );
+};
 
-const Bar = styled.div `
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    background-color:#FFFFFF;
-    width:100%;
-    height:65px;
-    box-shadow:0px 3px 6px rgba(0,0,0,0.16);
-    text-align:right;
-    z-index:1;
-`
+const Barstyle = styled.div`
+  width: 1300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: 768px) {
+    width:90%;
+  }
+`;
+
+const Bar = styled.div`
+  background-color: #ffffff;
+  width: 100%;
+  height: 65px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  text-align: right;
+`;
 
 const Name = styled.div`
-    position:absolute;
-    left:120px;
-    color:black;
-    line-height:65px;
-    font-size:30px;
-    font-family: 'Baloo Da 2', cursive;
-    @media (max-width: 768px) {
-        left:30px;
-    }
-`
+  color: black;
+  line-height: 65px;
+  font-size: 30px;
+  font-family: "Baloo Da 2", cursive;
+  @media (max-width: 768px) {
+  }
+`;
 
 const Snsimage = styled.img`
-    position:relative;
-    top:17px;
-    right:100px;
-    width:30px;
-    height:auto;
-    margin-right:10px;
-    @media (max-width: 768px) {
-        right:10px;
-        width:30px;
-        top:18px;
-    }
-`
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+  @media (max-width: 768px) {
+  }
+`;
 
 export default Topbar;

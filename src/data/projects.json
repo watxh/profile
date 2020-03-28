@@ -1,0 +1,22 @@
+[
+    {
+        "name" : "splash",
+        "color": "linear-gradient(#FFAFAF, #FF674F)"
+    },
+    {
+        "name" : "dimidel",
+        "color": "linear-gradient(#F2E4C0, #FFC744)"
+    },
+    {
+        "name" : "iceteam",
+        "color": "linear-gradient(#004D7C, #002A42)"
+    },
+    {
+        "name" : "inu",
+        "color": "linear-gradient(#9EC4FF, #4F96DD)"
+    },
+    {
+        "name" : "iceteam",
+        "color": "linear-gradient(#004D7C, #002A42)"
+    }
+]

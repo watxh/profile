@@ -1,19 +1,37 @@
-import styled from 'styled-components';
-import React, { Component }  from 'react';
+import styled, {css} from "styled-components";
+import React, { Component } from "react";
 
-const Projectcard = () => {
-    return(
-        <>
-        </>
-    );
-}
+const Projectcard = ({image,name,color}) => {
+  return (
+    <>
+      <Card color={color}>
+        <Cardimage src = {image}/>
+      </Card>
+    </>
+  );
+};
 
 const Card = styled.div`
-    position:relative;
-    background-color:green; /*교체예정*/
-    border-radius:15px;
-    width:300px;
-    height:350px;
+  ${({ color }) => color && css`
+    background: ${color};
+  `};
+  border-radius: 10px;
+  width: 270px;
+  height: 350px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-right:30px;
+  margin-bottom:30px;
+  box-shadow:3px 3px 5px rgba(0,0,0,0.28);
+  transition: all 0.7s;
+  &:hover {
+    transform: scale(1.02);
+  }
 `;
 
-export default Projectcard; 
+const Cardimage = styled.img`
+  width:250px;
+`;
+
+export default Projectcard;
