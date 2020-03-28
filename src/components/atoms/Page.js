@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const Page = styled.main`
   position: absolute;
-  background-color:#F9F9F9;
   top: 0;
   left: 0;
   width: 100%;

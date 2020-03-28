@@ -25,6 +25,7 @@ const Bar = styled.div `
     height:65px;
     box-shadow:0px 3px 6px rgba(0,0,0,0.16);
     text-align:right;
+    z-index:1;
 `
 
 const Name = styled.div`

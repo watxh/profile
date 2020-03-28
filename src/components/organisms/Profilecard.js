@@ -18,10 +18,10 @@ const Profilecard = () =>{
 const Card = styled.div `
     background-color:white;
     top:0;bottom:0;left:0;right:0;
-    margin-top:-40px;
     width:880px;
     height:320px;
     box-shadow:5px 5px 10px rgba(0,0,0,0.25);
+    z-index:0;
     @media (max-width: 768px) {
         width:300px;
         height:310px;
