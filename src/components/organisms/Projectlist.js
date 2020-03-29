@@ -1,20 +1,37 @@
 import styled from "styled-components";
 import React, { Component } from "react";
 import Projectcard from "../molecules/Projectcard";
+import { useState } from 'react';
 
 import projects from "../../data/projects"
 
 const Projectlist = () => {
+
+  const [cardnum, setCardnum] = useState(0);
+  const [cardnumb, setCardnumb] = useState(0);
+
+  const cardclick = (num) =>{
+    if(cardnum!==0){
+      setCardnumb(cardnum);
+    }
+    setCardnum(num);
+  }
+
   return (
     <Project>
       <Name>🔥 PROJECT</Name>
       <Projectgroup>
-        {projects.map(({ name,color }) => (
+        {projects.map(({ num,name,color }) => (
+          <div onClick={() => cardclick(num)}>
           <Projectcard
+            num={num}
             image={require(`../../assets/projectimage/${name}.png`)}
             name={name}
             color={color}
+            cardnum = {cardnum}
+            cardnumb = {cardnumb}
           />
+          </div>
         ))}
       </Projectgroup>
     </Project>
@@ -30,6 +47,7 @@ const Project = styled.div`
 
 const Name = styled.div`
   color: black;
+  margin-left:15px;
   font-size: 40px;
   font-family: "Baloo Da 2", cursive;
 `;

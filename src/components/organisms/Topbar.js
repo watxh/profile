@@ -23,15 +23,13 @@ const Topbar = () => {
 };
 
 const Barstyle = styled.div`
-  width: 1300px;
+  width:90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  @media (max-width: 768px) {
-    width:90%;
-  }
+  
 `;
 
 const Bar = styled.div`

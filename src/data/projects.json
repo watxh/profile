@@ -1,21 +1,36 @@
 [
     {
+        "num":"1",
         "name" : "splash",
         "color": "linear-gradient(#FFAFAF, #FF674F)"
     },
     {
+        "num":"2",
         "name" : "dimidel",
         "color": "linear-gradient(#F2E4C0, #FFC744)"
     },
     {
+        "num":"3",
         "name" : "iceteam",
         "color": "linear-gradient(#004D7C, #002A42)"
     },
     {
+        "num":"4",
         "name" : "inu",
         "color": "linear-gradient(#9EC4FF, #4F96DD)"
     },
     {
+        "num":"5",
+        "name" : "iceteam",
+        "color": "linear-gradient(#004D7C, #002A42)"
+    },
+    {
+        "num":"6",
+        "name" : "iceteam",
+        "color": "linear-gradient(#004D7C, #002A42)"
+    },
+    {
+        "num":"7",
         "name" : "iceteam",
         "color": "linear-gradient(#004D7C, #002A42)"
     }
