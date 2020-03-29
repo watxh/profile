@@ -1,7 +1,7 @@
 import styled, {css, keyframes} from "styled-components";
 import React, { Component } from "react";
 
-const Projectcard = ({ num, image, name, color, cardnum, cardnumb }) => {
+const Projectcard = ({ num, name,color,pname,pcontent,pdate,image, cardnum, cardnumb }) => {
   return (
     <>
       {
@@ -21,15 +21,35 @@ const Projectcard = ({ num, image, name, color, cardnum, cardnumb }) => {
                   parseInt((cardnumb-1)/4) === parseInt((num-1)/4)
                   ?
                   <Cardcover big={1}>
-                    <Card color={color}>
+                    <Card color={color} big={1}>
                       <Cardimage src={image}  big={1}/>
                     </Card>
+                    <Cardtext>
+                      <Cardnametext>{pname}</Cardnametext>
+                      <Cardcontenttext>
+                        {pcontent.split('\n').map((line,idx) => (
+                          <span key={`line-${idx}`}>{line}</span>
+                        ))}
+                        <br/>
+                        {pdate}
+                      </Cardcontenttext>
+                    </Cardtext>
                   </Cardcover>
                   :
                   <Cardcover mbig={1}>
                     <Card color={color}>
                       <Cardimage src={image}  big={1}/>
                     </Card>
+                    <Cardtext>
+                      <Cardnametext>{pname}</Cardnametext>
+                      <Cardcontenttext>
+                        {pcontent.split('\n').map((line,idx) => (
+                          <span key={`line-${idx}`}>{line}</span>
+                        ))}
+                        <br/>
+                        {pdate}
+                      </Cardcontenttext>
+                    </Cardtext>
                   </Cardcover>
                 }
                 </>
@@ -60,7 +80,7 @@ const Projectcard = ({ num, image, name, color, cardnum, cardnumb }) => {
                     num===cardnumb
                     ?
                     <Cardcover bigtosmall={1}>
-                      <Card color={color} big={1}>
+                      <Card color={color}>
                         <Cardimage src={image} big={1}/>
                       </Card>
                     </Cardcover>
@@ -77,7 +97,7 @@ const Projectcard = ({ num, image, name, color, cardnum, cardnumb }) => {
                       :
                       <Cardcover>
                         <Card color={color}>
-                          <Cardimage src={image} big={1}/>
+                          <Cardimage src={image}/>
                         </Card>
                       </Cardcover>
                     }
@@ -164,6 +184,39 @@ const bigwidthopacity = keyframes`
     opacity:1;
   }
 `
+
+const textopacity = keyframes`
+  0% {
+    opacity:0;
+  }
+  70%{
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+`
+
+const Cardtext = styled.div`
+  color:black;
+  margin-left:50px;
+  animation: ${textopacity} 0.8s;
+  display:flex;
+  flex-direction:column;
+`;
+
+const Cardnametext = styled.div`
+  font-size:30px;
+  font-family: 'Do Hyeon', sans-serif;
+  margin-bottom:50px;
+`;
+
+const Cardcontenttext = styled.div`
+  font-size:25px;
+  font-family: 'Do Hyeon', sans-serif;
+  display:flex;
+  flex-direction:column;
+`;
 
 const Cardcover = styled.div`
   background-color:#D9D9D9;

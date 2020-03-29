@@ -2,36 +2,58 @@
     {
         "num":"1",
         "name" : "splash",
-        "color": "linear-gradient(#FFAFAF, #FF674F)"
+        "color": "linear-gradient(#FFAFAF, #FF674F)",
+
+        "pname":"Splash the ball",
+        "pcontent":"Unity를 배운 이후 첫 프로젝트입니다.\n공을 튕겨 점수를 획득하는\n평범한 아케이드 게임입니다.",
+        "pdate":"2019.5 ~ 2019.7"
     },
     {
         "num":"2",
         "name" : "dimidel",
-        "color": "linear-gradient(#F2E4C0, #FFC744)"
+        "color": "linear-gradient(#F2E4C0, #FFC744)",
+
+        "pname":"디미통운",
+        "pcontent":"교내 C언어 콘솔 게임 만들기 대회에서\n은상을 수상한 프로젝트입니다.\n지역에 맞춰 택배를 운반하는 게임입니다.",
+        "pdate":"2020.8 ~ 2020.12"
     },
     {
         "num":"3",
         "name" : "iceteam",
-        "color": "linear-gradient(#004D7C, #002A42)"
+        "color": "linear-gradient(#004D7C, #002A42)",
+
+        "pname":"거기너얼마나질렀니",
+        "pcontent":"React를 배운 이후 첫 프로젝트입니다.\n스팀 프로필 url을 입력하면 스팀에 과금한\n금액을 아이스크림 개수로 바꿔 줍니다.",
+        "pdate":"2020.3.3 ~ 2020.3.11 "
     },
     {
         "num":"4",
         "name" : "inu",
-        "color": "linear-gradient(#9EC4FF, #4F96DD)"
+        "color": "linear-gradient(#9EC4FF, #4F96DD)",
+
+        "pname":"INU",
+        "pcontent":"한국디지털미디어고등학교 동아리\nINU의 웹사이트 입니다.\n프론트엔드 개발에 참여했습니다.",
+        "pdate":"2020.3 ~ "
     },
     {
         "num":"5",
         "name" : "iceteam",
-        "color": "linear-gradient(#004D7C, #002A42)"
+        "color": "linear-gradient(#004D7C, #002A42)",
+
+        "pname":"거기너얼마나질렀니"
     },
     {
         "num":"6",
         "name" : "iceteam",
-        "color": "linear-gradient(#004D7C, #002A42)"
+        "color": "linear-gradient(#004D7C, #002A42)",
+
+        "pname":"거기너얼마나질렀니"
     },
     {
         "num":"7",
         "name" : "iceteam",
-        "color": "linear-gradient(#004D7C, #002A42)"
+        "color": "linear-gradient(#004D7C, #002A42)",
+
+        "pname":"거기너얼마나질렀니"
     }
 ]

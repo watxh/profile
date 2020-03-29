@@ -21,13 +21,11 @@ const Projectlist = () => {
     <Project>
       <Name>🔥 PROJECT</Name>
       <Projectgroup>
-        {projects.map(({ num,name,color }) => (
-          <div onClick={() => cardclick(num)}>
+        {projects.map(({ ...props }) => (
+          <div onClick={() => cardclick(props.num)}>
           <Projectcard
-            num={num}
-            image={require(`../../assets/projectimage/${name}.png`)}
-            name={name}
-            color={color}
+            {...props}
+            image={require(`../../assets/projectimage/${props.name}.png`)}
             cardnum = {cardnum}
             cardnumb = {cardnumb}
           />
