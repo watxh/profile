@@ -1,7 +1,7 @@
 import styled, {css, keyframes} from "styled-components";
 import React, { Component } from "react";
 
-const Projectcard = ({ num, name,color,pname,pcontent,pdate,image, cardnum, cardnumb }) => {
+const Projectcard = ({ num, name,color,pname,pcontent,pdate,ptag,image, cardnum, cardnumb }) => {
   return (
     <>
       {
@@ -25,7 +25,9 @@ const Projectcard = ({ num, name,color,pname,pcontent,pdate,image, cardnum, card
                       <Cardimage src={image}  big={1}/>
                     </Card>
                     <Cardtext>
-                      <Cardnametext>{pname}</Cardnametext>
+                      <Cardnametext>
+                        {pname}
+                      </Cardnametext>
                       <Cardcontenttext>
                         {pcontent.split('\n').map((line,idx) => (
                           <span key={`line-${idx}`}>{line}</span>
@@ -34,6 +36,9 @@ const Projectcard = ({ num, name,color,pname,pcontent,pdate,image, cardnum, card
                         {pdate}
                       </Cardcontenttext>
                     </Cardtext>
+                    <Cardtagtext>
+                          {ptag}
+                    </Cardtagtext>
                   </Cardcover>
                   :
                   <Cardcover mbig={1}>
@@ -41,7 +46,9 @@ const Projectcard = ({ num, name,color,pname,pcontent,pdate,image, cardnum, card
                       <Cardimage src={image}  big={1}/>
                     </Card>
                     <Cardtext>
-                      <Cardnametext>{pname}</Cardnametext>
+                        <Cardnametext>
+                          {pname}
+                        </Cardnametext>
                       <Cardcontenttext>
                         {pcontent.split('\n').map((line,idx) => (
                           <span key={`line-${idx}`}>{line}</span>
@@ -50,6 +57,9 @@ const Projectcard = ({ num, name,color,pname,pcontent,pdate,image, cardnum, card
                         {pdate}
                       </Cardcontenttext>
                     </Cardtext>
+                    <Cardtagtext>
+                      {ptag}
+                    </Cardtagtext>
                   </Cardcover>
                 }
                 </>
@@ -200,7 +210,7 @@ const textopacity = keyframes`
 const Cardtext = styled.div`
   color:black;
   margin-left:50px;
-  animation: ${textopacity} 0.8s;
+  animation: ${textopacity} 1.2s;
   display:flex;
   flex-direction:column;
 `;
@@ -209,6 +219,9 @@ const Cardnametext = styled.div`
   font-size:30px;
   font-family: 'Do Hyeon', sans-serif;
   margin-bottom:50px;
+  display:flex;
+  flex-direction:row;
+  text-align:center;
 `;
 
 const Cardcontenttext = styled.div`
@@ -216,6 +229,14 @@ const Cardcontenttext = styled.div`
   font-family: 'Do Hyeon', sans-serif;
   display:flex;
   flex-direction:column;
+`;
+
+const Cardtagtext = styled.div`
+  margin-top:270px;
+  font-size:25px;
+  font-family: 'Do Hyeon', sans-serif;
+  color:gray;
+  animation: ${textopacity} 1.2s;
 `;
 
 const Cardcover = styled.div`
