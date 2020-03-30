@@ -40,20 +40,26 @@
         "name" : "iceteam",
         "color": "linear-gradient(#004D7C, #002A42)",
 
-        "pname":"거기너얼마나질렀니"
+        "pname":"거기너얼마나질렀니",
+        "pcontent":"React를 배운 이후 첫 프로젝트입니다.\n스팀 프로필 url을 입력하면 스팀에 과금한\n금액을 아이스크림 개수로 바꿔 줍니다.",
+        "pdate":"2020.3.3 ~ 2020.3.11 "
     },
     {
         "num":"6",
         "name" : "iceteam",
         "color": "linear-gradient(#004D7C, #002A42)",
 
-        "pname":"거기너얼마나질렀니"
+        "pname":"거기너얼마나질렀니",
+        "pcontent":"React를 배운 이후 첫 프로젝트입니다.\n스팀 프로필 url을 입력하면 스팀에 과금한\n금액을 아이스크림 개수로 바꿔 줍니다.",
+        "pdate":"2020.3.3 ~ 2020.3.11 "
     },
     {
         "num":"7",
         "name" : "iceteam",
         "color": "linear-gradient(#004D7C, #002A42)",
 
-        "pname":"거기너얼마나질렀니"
+        "pname":"거기너얼마나질렀니",
+        "pcontent":"React를 배운 이후 첫 프로젝트입니다.\n스팀 프로필 url을 입력하면 스팀에 과금한\n금액을 아이스크림 개수로 바꿔 줍니다.",
+        "pdate":"2020.3.3 ~ 2020.3.11 "
     }
 ]

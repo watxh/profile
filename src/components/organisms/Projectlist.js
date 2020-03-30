@@ -8,7 +8,7 @@ import projects from "../../data/projects"
 const Projectlist = () => {
 
   const [cardnum, setCardnum] = useState(0);
-  const [cardnumb, setCardnumb] = useState(0);
+  const [cardnumb, setCardnumb] = useState(10);
 
   const cardclick = (num) =>{
     if(cardnum!==0){
