@@ -11,10 +11,14 @@ const Projectlist = () => {
   const [cardnumb, setCardnumb] = useState(10);
 
   const cardclick = (num) =>{
-    if(cardnum!==0){
-      setCardnumb(cardnum);
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+      
+    }else{
+      if(cardnum!==0){
+        setCardnumb(cardnum);
+      }
+      setCardnum(num);
     }
-    setCardnum(num);
   }
 
   return (
@@ -41,6 +45,10 @@ const Project = styled.div`
   margin-right: auto;
   width: 1200px;
   margin-top: 330px;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 const Name = styled.div`
