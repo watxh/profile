@@ -125,7 +125,7 @@ const Projectcard = ({ num, name,color,pname,pcontent,pdate,ptag,image, cardnum,
 
 const toobigwidth = keyframes`
   0% {
-    width:0px;
+    width:60px;
   }
   100% {
     width:900px;
