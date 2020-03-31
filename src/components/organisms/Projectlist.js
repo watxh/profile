@@ -14,7 +14,7 @@ const Projectlist = () => {
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
       
     }else{
-      if(cardnum!==0){
+      if(cardnum!==0 && cardnum!==num){
         setCardnumb(cardnum);
       }
       setCardnum(num);

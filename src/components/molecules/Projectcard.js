@@ -1,7 +1,7 @@
 import styled, {css, keyframes} from "styled-components";
 import React, { Component } from "react";
 
-const Projectcard = ({ num, name,color,pname,pcontent,pdate,ptag,image, cardnum, cardnumb }) => {
+const Projectcard = ({ num, name,color,pname,pcontent,pdate,ptag,psite,image, cardnum, cardnumb }) => {
   return (
     <>
       {
@@ -25,9 +25,11 @@ const Projectcard = ({ num, name,color,pname,pcontent,pdate,ptag,image, cardnum,
                       <Cardimage src={image}  big={1}/>
                     </Card>
                     <Cardtext>
-                      <Cardnametext>
-                        {pname}
-                      </Cardnametext>
+                      <Asite href={psite}>
+                        <Cardnametext>
+                          {pname}
+                        </Cardnametext>
+                      </Asite>
                       <Cardcontenttext>
                         {pcontent.split('\n').map((line,idx) => (
                           <span key={`line-${idx}`}>{line}</span>
@@ -46,9 +48,11 @@ const Projectcard = ({ num, name,color,pname,pcontent,pdate,ptag,image, cardnum,
                       <Cardimage src={image}  big={1}/>
                     </Card>
                     <Cardtext>
+                      <Asite href={psite}>
                         <Cardnametext>
                           {pname}
                         </Cardnametext>
+                      </Asite>
                       <Cardcontenttext>
                         {pcontent.split('\n').map((line,idx) => (
                           <span key={`line-${idx}`}>{line}</span>
@@ -207,6 +211,11 @@ const textopacity = keyframes`
   }
 `
 
+const Asite = styled.a `
+  text-decoration:none;
+  color: black;
+`;
+
 const Cardtext = styled.div`
   color:black;
   margin-left:50px;
@@ -219,8 +228,7 @@ const Cardnametext = styled.div`
   font-size:30px;
   font-family: 'Do Hyeon', sans-serif;
   margin-bottom:50px;
-  display:flex;
-  flex-direction:row;
+  display:inline-block;
   text-align:center;
 `;
 
